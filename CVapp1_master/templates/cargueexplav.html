@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+  {% load static %}
+  {% block content %}
+
+<h1>Experiencia Laboral</h1>
+
+
+
+<table class="table" align="left">
+    <thead class="thead-dark" align="left">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Empresa</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Inicio laboral</th>
+        <th scope="col">Fin laboral</th>
+        <th scope="col">Funciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for Exp_Profesional in object_list %}
+      <tr>
+        <td>{{ Exp_Profesional.id }}</td>
+        <td>{{ Exp_Profesional.Empresa }}</td>
+        <td>{{ Exp_Profesional.Departamento }}</td>
+        <td>{{ Exp_Profesional.Periodo_inicio }}</td>
+        <td>{{ Exp_Profesional.Periodo_fin}}</td>
+        <td>{{ Exp_Profesional.Funciones }}</td>
+
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock %}
