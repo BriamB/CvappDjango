@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %}
+  {% load static %}
+  {% block content %}
+
+  <ul class="list-group">
+    <li class="list-group-item active">Detalle Hoja de vida de {{carga_cv.nombre}} {{carga_cv.apellido}}</li>
+    <li class="list-group-item">Name: {{carga_cv.nombre}}</li>
+    <li class="list-group-item">Last Name: {{carga_cv.apellido}}</li>
+    <li class="list-group-item">ID Type: {{carga_cv.tipo_identificacion}}</li>
+    <li class="list-group-item">Identification card: {{carga_cv.cedula}}</li>
+    <li class="list-group-item">Birth date: {{carga_cv.fecha_nacimiento}}</li>
+    <li class="list-group-item">Gender status: {{carga_cv.genero}}</li>
+    <li class="list-group-item">Martial: {{carga_cv.estado_civil}}</li>
+    <li class="list-group-item">Phone: {{carga_cv.telefono}}</li>
+    <li class="list-group-item">City: {{carga_cv.municipio}}</li>
+    <li class="list-group-item">Direction: {{carga_cv.direccion}}</li>
+    <li class="list-group-item">Education Center: {{carga_cv.Centro_educativo}}</li>
+    <li class="list-group-item">Education Level: {{carga_cv.Nivel_educativo}}</li>
+    <li class="list-group-item">Study Status: {{carga_cv.Estado_estudio}}</li>
+    <li class="list-group-item">Position: {{carga_cv.cargo}}</li>
+    <li class="list-group-item">End Company: {{carga_cv.Empresa}}</li>
+    <li class="list-group-item">Start Period: {{carga_cv.Periodo_inicio}}</li>
+    <li class="list-group-item">End Period: {{carga_cv.Periodo_fin}}</li>
+    <li class="list-group-item">Principal Functions: {{carga_cv.Funciones}}</li>
+    <li class="list-group-item">Language: {{carga_cv.idioma}}</li>
+    <li class="list-group-item">Level Language: {{carga_cv.nivel}}</li>
+    <li class="list-group-item">Work Area: {{carga_cv.area}}</li>
+    <li class="list-group-item">Salary: {{carga_cv.salario}}</li>
+    <p>photo: <img src="http://localhost:8000/media/{{ carga_cv.foto }}" width="120"></p>
+    <p>Curriculum: <img src="http://localhost:8000/media/{{ carga_cv.archivo_cv }}" width="120"></p>
+  </ul>
+{% endblock %}
